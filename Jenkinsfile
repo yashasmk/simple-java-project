@@ -4,7 +4,8 @@ pipeline {
         stage('Build') {
 		     agent { label 'master' } 
             steps {
-                sh ''' 
+                sh '''    
+                         whoami
 	                 /home/ec2-user/simple-java-project
                          mvn clearn deploy	
 				   '''						

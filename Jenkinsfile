@@ -5,7 +5,7 @@ pipeline {
 		     agent { label 'master' } 
             steps {
                 sh ''' 
-				         cd /home/ec2-user/simple-java-project
+	                 /home/ec2-user/simple-java-project
                          mvn clearn deploy	
 				   '''						
             }

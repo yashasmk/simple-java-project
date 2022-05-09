@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages { 
         stage('Build') {
-		     agent { lable 'master' } 
+		     agent { label 'master' } 
             steps {
                 sh ''' 
 				         cd /home/ec2-user/simple-java-project

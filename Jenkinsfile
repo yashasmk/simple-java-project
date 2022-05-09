@@ -1,15 +1,15 @@
 pipeline {
     agent none
     stages { 
-        stage('Build') 
+        stage('Build') {
 		     agent { lable 'master' } 
             steps {
                 sh ''' 
-			        cd /home/ec2-user/simple-java-project
-                                mvn clearn deploy	
+				         cd /home/ec2-user/simple-java-project
+                         mvn clearn deploy	
 				   '''						
             }
-        }
+		 }
         stage('Test') {
 		      agent { label 'slave1' }  
             steps {
@@ -22,4 +22,6 @@ pipeline {
                 sh 'echo STAGE 3: This is a Deploy stage'
             }
         }
- }
+    }
+}
+
